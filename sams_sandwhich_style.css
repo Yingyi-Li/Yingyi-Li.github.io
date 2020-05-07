@@ -1,0 +1,104 @@
+@charset "UTF-8";
+/* CSS Document */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.accordion:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+input:invalid{
+	background-color: lightpink;
+}
+
+input:valid{
+	background-color: lightgreen;
+}
+
+input:invalid {
+    border: 1px solid red;
+}
+
+input[type=text], [type=tel] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#confirmOverlay {
+    /* style on confirm overlay */
+    position: fixed;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #EBFF2D;
+    opacity: 0.95;
+    transition: 0.2s;
+    width: 100vw;
+    height: 0;
+    /* height adjusted to expand overlay */
+}
+
+#confirmOverlay p {
+    /* style on text portion of confirm overlay */
+    line-height: 100vh;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 3vw;
+    opacity: 1.0;
+    color: #000000;
+}
+
+#confirmOverlay a {
+    /* style on cross to close confirm overlay */
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    position: absolute;
+    top: 0px;
+    right: 45px;
+    font-size: 90px;
+}
+
+#confirmOverlay a:hover {
+    color: yellow;
+}
+
+
+
